@@ -6,7 +6,7 @@ from transformers import BertTokenizer
 from model import Transformer
 from util import ExcelTranslationDataset
 
-# Pre-trained Tokenizers from Hugging Face
+# Tokenizers
 src_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 trg_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
@@ -87,10 +87,10 @@ for epoch in range(10):
 
     print(f"Epoch [{epoch + 1}/10], Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}, Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}")
 
-# Save the model
+# Save model
 torch.save(model.state_dict(), "transformer_model.pth")
 
-# Example usage for translation
+# Example usage
 def translate_sentence(sentence, model, src_tokenizer, trg_tokenizer, max_length, device):
     tokens = src_tokenizer.encode(sentence, max_length=max_length, padding='max_length', truncation=True, return_tensors='pt').to(device)
     trg_indices = [trg_tokenizer.cls_token_id]
@@ -107,7 +107,7 @@ def translate_sentence(sentence, model, src_tokenizer, trg_tokenizer, max_length
     translated_tokens = trg_tokenizer.convert_ids_to_tokens(trg_indices)
     return " ".join(translated_tokens)
 
-# Load the trained model for translation
+# Load the trained model
 model.load_state_dict(torch.load("transformer_model.pth"))
 model.eval()
 

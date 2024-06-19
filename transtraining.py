@@ -16,7 +16,7 @@ trg_vocab_size = trg_tokenizer.vocab_size
 src_pad_idx = src_tokenizer.pad_token_id
 trg_pad_idx = trg_tokenizer.pad_token_id
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-max_length = 10
+max_length = 5
 
 # Model
 model = Transformer(src_vocab_size, trg_vocab_size, src_pad_idx, trg_pad_idx, device=device).to(device)

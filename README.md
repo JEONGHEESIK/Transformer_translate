@@ -169,7 +169,7 @@ class Transformer(nn.Module):
 #### output
 - Current Progress
 
-accuracy problem
-the speed of learning problem
-overfitting problem
+##### accuracy problem
+###### the speed of learning problem
+###### overfitting problem
 └ hyper-parameter changing, dataset reduction etc.. processing

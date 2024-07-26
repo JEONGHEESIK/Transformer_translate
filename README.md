@@ -11,11 +11,15 @@
 - 참여도 : 100% (개인 프로젝트)
 
 ## 사용 기술 및 개발 환경
-- O/S : macOS 14.5 (Sonoma), Window 10
-- DB : MySQL
-- Framework : PyTorch
-- Language : Python
-- Tool : GitHub, SQL Developer, VSCode
+- O/S: macOS 14.5 (Sonoma), Windows 10
+- Framework: PyTorch
+- Language: Python
+- Tool: GitHub, VSCode
+- CUDA Version: 12.5
+- Python Libraries: Transformers, pandas, torch, torchtext
+- Optimizer: Adam
+- Activation Function: ReLU
+- Regularization: Dropout
 
 ## 내용
 #### 구현 기능
